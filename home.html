@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "bit3lzi",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>WORK/merumo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"
+      type="text/javascript"
+    ></script>
+  </head>
+
+  <body id="top">
+    <header class="header">
+      <!-- ヘッダーロゴ -->
+
+      <!-- ハンバーガーメニュー部分 -->
+      <div class="nav">
+        <div class="a"></div>
+        <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+        <input id="drawer_input" class="drawer_hidden" type="checkbox" />
+
+        <!-- ハンバーガーアイコン -->
+        <label for="drawer_input" class="drawer_open"><span></span></label>
+
+        <!-- メニュー -->
+        <nav class="nav_content">
+          <ul class="nav_list">
+            <div class="navtop">
+              <li class="current-page">
+                <a href="./home.html" class="first">home</a>
+              </li>
+              <li class="nav_item"><a href="./profile.html">profile</a></li>
+              <li class="nav_item"><a href="./work.html">work</a></li>
+              <li class="nav_item"><a href="./home.html">fan art</a></li>
+              <li class="nav_item"><a href="./home.html">shop</a></li>
+              <li class="nav_item"><a href="./contact.html">contact</a></li>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <a href="#top"><img src="./image/icon_cat.png" alt="icon_cat" /></a>
+      <div class="taitleimg">
+        <img src="./image/mv.png" alt="" class="sp" />
+        <img src="./image/mv_pc.png" alt="" class="pc" />
+      </div>
+
+      <div class="taitlemessage">
+        <h1>-merumo-</h1>
+        <p>セルフVTuber<strong>めるも</strong>の公式Webサイトです</p>
+      </div>
+
+      <section class="news">
+        <h1>News</h1>
+        <div class="flex">
+          <div class="newssec">
+            <img src="./image/newcostume.png" class="border" alt="border" />
+            <a
+              href="./image/newcostumebig.png"
+              data-lightbox="group"
+              class="plus"
+              ><img src="./image/plusbutton.png"
+            /></a>
+            <h3>新衣装制作中！</h3>
+            <p>夏に向けて新しい衣装を考えています</p>
+          </div>
+
+          <div class="newssec">
+            <img src="./image/kv.png" class="border" alt="border" />
+            <a href="./image/kv_big.png" data-lightbox="group" class="plus"
+              ><img src="./image/plusbutton.png"
+            /></a>
+            <h3>キービジュアル公開！</h3>
+            <p>実は杖を持っています</p>
+          </div>
+
+          <div class="newssec">
+            <img src="./image/stand_screen.png" class="border" alt="border" />
+            <a
+              href="./image/stand_screen_big.png"
+              data-lightbox="group"
+              class="plus"
+              ><img src="./image/plusbutton.png"
+            /></a>
+            <h3>お部屋公開！</h3>
+            <p class="news_last">友達がお部屋を作ってくれました！</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="youtube">
+        <h1>YouTube</h1>
+        <div class="flex">
+          <div class="fukidasi">
+            <p>動いている姿も見てね！</p>
+          </div>
+          <div class="movie">
+            <iframe
+              width="304"
+              height="171"
+              src="https://www.youtube.com/embed/aKsvaOzw6-Q"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <p>初配信！！！🐈🐬</p>
+
+            <iframe
+              width="304"
+              height="171"
+              src="https://www.youtube.com/embed/Si350uV2S0I"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <p>あついね🐈🐬</p>
+
+            <iframe
+              width="304"
+              height="171"
+              src="https://www.youtube.com/embed/za4f1KOEjus"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <p>初めましてめるもです！！</p>
+
+            <a href="https://www.youtube.com/channel/UCnDut06R1O8f668tdQpEXmQ"
+              ><img src="./image/y_icon.png" alt=""
+            /></a>
+          </div>
+        </div>
+        <section class="twitter">
+          <h1>Twitter</h1>
+          <div class="flex">
+            <div class="fukidasi">
+              <p>日常が見れます！</p>
+            </div>
+            <div class="twittersec">
+              <a
+                class="twitter-timeline"
+                data-width="304"
+                data-height="616"
+                href="https://twitter.com/o_merumo_oO?ref_src=twsrc%5Etfw"
+                >Tweets by o_merumo_oO</a
+              >
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+              <img
+                src="./image/Twitter_logo_ blue.png"
+                alt=""
+                width="32px
+              "
+              />
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <div class="icon">
+        <a href="https://twitter.com/o_merumo_oO">
+          <img
+            src="./image/Twitter_logo_white.png"
+            width="32px
+          "
+            alt=""
+        /></a>
+        <a href="https://www.youtube.com/channel/UCnDut06R1O8f668tdQpEXmQ"
+          ><img
+            src="./image/y_icon_white.png"
+            alt=""
+            width="40px
+          "
+        /></a>
+      </div>
+      <p>©2022 meromo</p>
+      <img src="./image/lightbluecat.png" alt="lightbluecat" />
+    </footer>
+  </body>
+</html>

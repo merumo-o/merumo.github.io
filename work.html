@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "bit3lzi",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>WORK/merumo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"
+      type="text/javascript"
+    ></script>
+  </head>
+
+  <body id="top">
+    <header class="header">
+      <!-- ヘッダーロゴ -->
+
+      <!-- ハンバーガーメニュー部分 -->
+      <div class="nav">
+        <div class="a"></div>
+        <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+        <input id="drawer_input" class="drawer_hidden" type="checkbox" />
+
+        <!-- ハンバーガーアイコン -->
+        <label for="drawer_input" class="drawer_open"><span></span></label>
+
+        <!-- メニュー -->
+        <nav class="nav_content">
+          <ul class="nav_list">
+            <div class="navtop">
+              <li class="nav_item"><a href="./home.html">home</a></li>
+              <li class="nav_item">
+                <a href="./profile.html">profile</a>
+              </li>
+              <li class="current-page"><a href="./work.html">work</a></li>
+              <li class="nav_item"><a href="./home.html">fan art</a></li>
+              <li class="nav_item"><a href="./home.html">shop</a></li>
+              <li class="nav_item"><a href="./contact.html">contact</a></li>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <a href="#top"><img src="./image/icon_cat.png" alt="icon_cat" /></a>
+      <section class="work">
+        <h1>-work-</h1>
+        <div class="produce">
+          <h3>produce</h3>
+          <div class="flex2">
+            <div class="produce2">
+              <a href="#domomon"
+                ><img src="./image/domomon_icon.png" alt="p_icon"
+              /></a>
+              <p>どももん</p>
+              <p class="E_name2">domomon</p>
+            </div>
+            <div class="produce2">
+              <a href="#yukina"
+                ><img src="./image/yukina_icon.png" alt="p_icon"
+              /></a>
+              <p class="yukina_word">ゆきな゜</p>
+              <p class="E_name2">yukina</p>
+            </div>
+          </div>
+          <p class="produce_ex">
+            キャラクターデザイン、<br />イラスト、モデリングなどを手がけました
+          </p>
+        </div>
+      </section>
+      <img src="./image/lightbluecat.png" alt="lightbluecat" id="domomon" />
+      <div class="line_one"></div>
+
+      <section class="domomon">
+        <h2>どももん</h2>
+        <p class="work_E_name">domomon</p>
+        <div class="work_flex">
+          <img src="./image/domomon_mv.png" alt="domomon" />
+          <div>
+            <p class="V_information">
+              魔法使い(？) <br />
+              クローバー系Vtuber
+            </p>
+            <div class="work_fav_green">
+              <h3>favorite</h3>
+              <div class="flex2">
+                <div class="work_item">
+                  <img src="./image/game_green.png" alt="high" />
+                  <p>ゲーム</p>
+                </div>
+                <div class="work_item">
+                  <img src="./image/guitar_green.png" />
+                  <p class="guitar">ギター</p>
+                </div>
+              </div>
+              <p>
+                FA:#ど絵もん <br />
+                配信:#どもも緑地化計画 <br />
+                FM:🍀💫
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="work_respons">イラスト・モデリング担当</p>
+        <div class="work__sns_icon">
+          <a href="https://twitter.com/o_merumo_oO">
+            <img
+              src="./image/Twitter_logo_ blue.png"
+              width="32px
+            "
+              alt=""
+          /></a>
+          <a href="https://www.youtube.com/channel/UCMAAvhi1dvE20SSzzpvi5OA">
+            <img src="./image/y_icon.png" alt="green" width="40px"
+          /></a>
+        </div>
+      </section>
+      <div class="line_second" id="yukina"></div>
+      <section class="yukina">
+        <h2>ゆきな゜</h2>
+        <p class="work_E_name">yukina</p>
+        <div class="work_flex">
+          <img src="./image/yukina_mv.png" alt="yukina" />
+          <div>
+            <p class="V_information">
+              骨帽子を被っている <br />
+              おにぎりが好きなVtuber
+            </p>
+            <div class="work_fav_blue">
+              <h3>favorite</h3>
+              <div class="flex2">
+                <div class="work_item">
+                  <img src="./image/game_gblue.png" alt="high" />
+                  <p>ゲーム</p>
+                </div>
+                <div class="work_item">
+                  <img src="./image/maiku_gblue.png" />
+                  <p class="guitar">歌</p>
+                </div>
+              </div>
+              <p>
+                FA:#ゆきなぁーと<br />
+                配信:#ゆきなをみろ<br />
+                FM:🍙🐻
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="work_respons_yukina">イラスト担当</p>
+        <div class="work__sns_icon">
+          <a href="https://twitter.com/o_merumo_oO">
+            <img
+              src="./image/Twitter_logo_ blue.png"
+              width="32px
+            "
+              alt=""
+          /></a>
+          <a href="https://www.youtube.com/channel/UC-YKYcyPF7XeW7fGyzkZ6gA">
+            <img src="./image/y_icon.png" alt="green" width="40px"
+          /></a>
+        </div>
+      </section>
+      <div class="line_second"></div>
+
+      <section class="another">
+        <h2>another</h2>
+        <div class="another_section">
+          <a href="https://youtu.be/WhVWDi-CJBE">
+            <img src="./image/chupuri.png" alt=""
+          /></a>
+          <p>
+            <strong>【Cover】チュープリ-ZOC【かなせ&ゆきな】</strong> <br />
+            イラスト担当
+          </p>
+        </div>
+        <div class="another_section">
+          <a href="https://youtu.be/ZRVT2jVgE14">
+            <img src="./image/cinderella.png" alt=""
+          /></a>
+          <p>
+            <strong>【Cover】シンデレラ-DECO*27【#00】</strong> <br />
+            イラスト担当
+          </p>
+        </div>
+      </section>
+
+      <div class="work_last">
+        <div class="balloon1-right">
+          <p>よかったら見てね！</p>
+        </div>
+        <img src="./image/merumo_box.png" alt="merumo_box" />
+      </div>
+    </main>
+    <footer>
+      <div class="icon">
+        <a href="https://twitter.com/o_merumo_oO">
+          <img
+            src="./image/Twitter_logo_white.png"
+            width="32px
+          "
+            alt=""
+        /></a>
+        <a href="https://www.youtube.com/channel/UCnDut06R1O8f668tdQpEXmQ"
+          ><img src="./image/y_icon_white.png" alt="" width="40px"
+        /></a>
+      </div>
+      <p>©2022 meromo</p>
+      <img src="./image/lightbluecat.png" alt="lightbluecat" />
+    </footer>
+  </body>
+</html>
