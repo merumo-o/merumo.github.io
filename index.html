@@ -32,6 +32,68 @@
         s.parentNode.insertBefore(tk, s);
       })(document);
     </script>
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "bit3lzi",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "bit3lzi",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>WORK/merumo</title>
@@ -47,13 +109,18 @@
     ></script>
   </head>
 
-  <body id="top">
+  <body>
     <header class="header">
       <!-- ヘッダーロゴ -->
+      <div class="logo">
+        <img src="./image/kuroneko.png" alt="" />
+      </div>
+      <div class="merumo">
+        <p>めるも</p>
+      </div>
 
       <!-- ハンバーガーメニュー部分 -->
       <div class="nav">
-        <div class="a"></div>
         <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
         <input id="drawer_input" class="drawer_hidden" type="checkbox" />
 
@@ -63,174 +130,127 @@
         <!-- メニュー -->
         <nav class="nav_content">
           <ul class="nav_list">
-            <div class="navtop">
-              <li class="current-page">
-                <a href="./index.html" class="first">home</a>
-              </li>
-              <li class="nav_item"><a href="./profile.html">profile</a></li>
-              <li class="nav_item"><a href="./work.html">work</a></li>
-     
-            </div>
+            <li class="current-page"><a href="./index.html">top</a></li>
+            <li class="nav_item">
+              <a href="./w_merumo.html">profile白</a>
+            </li>
+            <li class="nav_item">
+              <a href="./b_merumo.html">profile黒</a>
+            </li>
+
+            <li class="nav_item">
+              <a href="./work.html">work</a>
+            </li>
           </ul>
+
+          <img src="./image/chira.png" alt="" />
         </nav>
       </div>
     </header>
     <main>
-      <a href="#top"><img src="./image/icon_cat.png" alt="icon_cat" /></a>
       <div class="taitleimg">
-        <img src="./image/mv.png" alt="" class="sp" />
-        <img src="./image/mv_pc.png" alt="" class="pc" />
+        <img src="./image/top.png" alt="" />
       </div>
-
-      <div class="taitlemessage">
-        <h1>-merumo-</h1>
-        <p>セルフVTuber<strong>めるも</strong>の公式Webサイトです</p>
-      </div>
-
-      <section class="news">
-        <h1>News</h1>
-        <div class="flex">
-          <div class="news_flex">
-          <div class="newssec">
-            <img src="./image/newcostume.png" class="border" alt="border" />
-            <a
-              href="./image/newcostumebig.png"
-              data-lightbox="group"
-              class="plus"
-              ><img src="./image/plusbutton.png"
+      <h2 class="taitle_font">こんにちはめるもです。</h2>
+      <article>
+        <section class="btn_top">
+          <div class="topIcon">
+            <a href="#NEWS"
+              ><img src="./image/news_iconblue.png" alt="newsIcon"
             /></a>
-            <h3>新衣装制作中！</h3>
-            <p>夏に向けて新しい衣装を考えています</p>
           </div>
-
-          <div class="newssec">
-            <img src="./image/kv.png" class="border" alt="border" />
-            <a href="./image/kv_big.png" data-lightbox="group" class="plus"
-              ><img src="./image/plusbutton.png"
+          <div class="topIcon">
+            <a href="#TWICTH"
+              ><img src="./image/TwitchGlitchPurple.png" alt="twitchIcon"
             /></a>
-            <h3>キービジュアル公開！</h3>
-            <p>実は杖を持っています</p>
           </div>
-
-          <div class="newssec">
-            <img src="./image/stand_screen.png" class="border" alt="border" />
-            <a
-              href="./image/stand_screen_big.png"
-              data-lightbox="group"
-              class="plus"
-              ><img src="./image/plusbutton.png"
+          <div class="topIcon">
+            <a href="#TWITTER">
+              <img src="./image/Twitter_logo_ blue.png" alt="twitterIcon"
             /></a>
-            <h3>お部屋公開！</h3>
-            <p class="news_last">友達がお部屋を作ってくれました！</p>
           </div>
-        </div>
-        </div>
-      </section>
 
-      <section class="youtube">
-        <h1>YouTube</h1>
-        <div class="flex_y">
-          <div class="fukidasi">
-            <p>動いている姿も見てね！</p>
+          <div>
+            <a href="./b_merumo.html"
+              ><img src="./image/black_merumo.png" alt="black_merumo"
+            /></a>
           </div>
-          <div class="movie">
-            <div>
-              <iframe
-                width="304"
-                height="171"
-                src="https://www.youtube.com/embed/aKsvaOzw6-Q"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-              <p>初配信！！！🐈🐬</p>
-            </div>
-            <div>
-              <iframe
-                width="304"
-                height="171"
-                src="https://www.youtube.com/embed/Si350uV2S0I"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-              <p>あついね🐈🐬</p>
-            </div>
-            <div>
-              <iframe
-                width="304"
-                height="171"
-                src="https://www.youtube.com/embed/za4f1KOEjus"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-              <p>初めましてめるもです！！</p>
-            </div>
-      
+          <div>
+            <a href="./w_merumo.html"
+              ><img src="./image/white_merumo.png" alt="white_merumo"
+            /></a>
           </div>
-        </div>
-        <a href="https://www.youtube.com/channel/UCnDut06R1O8f668tdQpEXmQ"
-        ><img src="./image/douga.png" alt="y_icon" width="40px
-        "
-      /></a>
-      </section>
-        <section class="twitter">
-          <h1>Twitter</h1>
-          <div class="flex_y">
-            <div class="flex_t">
-            <div class="fukidasi">
-              <p>日常が見れます！</p>
-            </div>
-            <div class="twittersec">
-              
-              <a
-                class="twitter-timeline"
-                data-width="304"
-                data-height="616"
-                href="https://twitter.com/o_merumo_oO?ref_src=twsrc%5Etfw"
-                >Tweets by o_merumo_oO</a
-              >
-              <script
-                async
-                src="https://platform.twitter.com/widgets.js"
-                charset="utf-8"
-              ></script>
-              <img
-                src="./image/Twitter_logo_ blue.png"
-                alt=""
-                width="40px
-              "
-              />
-            </div>
+          <div> <a href="./work.html"
+            ><img src="./image/work_icon.png" alt="work_icon" /></a>
           </div>
-          </div>
-        </div>
         </section>
+      </article>
+      <span id="NEWS"></span>
+      <section class="news">
+        <h1 class="top_taitle">News</h1>
+        <div class="newssec">
+          <img src="./image/lineStamp.png" alt="" />
+          <p>↑Lineスタンプを発売しました！</p>
+        </div>
+        <hr class="borderLine" />
+        <div class="newssec">
+          <img src="./image/sinisyou.png" alt="" />
+          <p>↑新衣装公開しました！</p>
+        </div>
       </section>
+      <span id="TWICTH"></span>
+      <section class="twitch">
+        <h1 class="top_taitle">Twicth</h1>
+        <p>最新の配信↓</p>
+        <iframe
+          src="https://player.twitch.tv?autoplay=false&amp;muted=true&amp;parent=127.0.0.1&amp;referrer=http%3A%2F%2F127.0.0.1%3A5502%2Findex.html&amp;video=1800554294"
+          allowfullscreen=""
+          scrolling="no"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          title="Twitch"
+          sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+        ></iframe>
+        <div class="twicth_logo">
+          <img
+            src="./image/TwitchGlitchPurple.png"
+            alt=""
+            width="40px
+            "
+          />
+        </div>
+      </section>
+    
+        <section class="twitter"id="TWITTER" >
+        
+          <h1 class="top_taitle">Twitter</h1>
+
+          <div class="twittersec">
+            <a
+              class="twitter-timeline"
+              data-width="304"
+              data-height="616"
+              href="https://twitter.com/o_merumo_oO?ref_src=twsrc%5Etfw"
+              >Tweets by o_merumo_oO</a
+            >
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+            <img
+              src="./image/Twitter_logo_ blue.png"
+              alt=""
+              width="40px
+            "
+            />
+         
+            
+        </section>
+      </div>
     </main>
     <footer>
-      <div class="icon">
-        <a href="https://twitter.com/o_merumo_oO">
-          <img
-            src="./image/Twitter_logo_white.png"
-            width="32px
-          "
-            alt=""
-        /></a>
-        <a href="https://www.youtube.com/channel/UCnDut06R1O8f668tdQpEXmQ"
-          ><img
-            src="./image/douga_w.png"
-            alt=""
-            width="35px
-          "
-        /></a>
-      </div>
-      <p>©2022 meromo</p>
-      <img src="./image/lightbluecat.png" alt="lightbluecat" />
+      <p>©2023 meromo</p>
     </footer>
   </body>
 </html>

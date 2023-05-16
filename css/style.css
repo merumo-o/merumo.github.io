@@ -1,1993 +1,650 @@
-@media screen and (max-width: 768px) {
-  html {
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  position: absolute;
+  z-index: 50;
+  position: fixed;
+}
+body {
+  background: linear-gradient(#ebf0f7, #eae7f3);
+  height: 100%;
+  margin: 0 auto;
+}
+.body2 {
+  background: linear-gradient(#959fbe, #dfd9e6);
+  height: 100%;
+  margin: 0 auto;
+}
+@keyframes anime1 {
+  0% {
+    opacity: 0; /* 透明度指定 */
   }
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    position: absolute;
-    z-index: 50;
-    position: fixed;
+  100% {
+    opacity: 1; /* 透明度指定 */
   }
-  body {
-    background-color: #ffffff;
-    background-image: url(../image/backg2.jpg);
-    margin: 0 auto;
+}
+@keyframes anime2 {
+  0% {
+    opacity: 0; /* 透明度指定 */
+    top: 25px;
   }
-  main {
-    width: 390px;
-    margin: 0 auto;
-  }
-
-  @keyframes anime1 {
-    0% {
-      opacity: 0; /* 透明度指定 */
-    }
-    100% {
-      opacity: 1; /* 透明度指定 */
-    }
-  }
-  @keyframes anime2 {
-    0% {
-      opacity: 0; /* 透明度指定 */
-      top: 25px;
-    }
-    100% {
-      opacity: 1; /* 透明度指定 */
-      top: 0;
-    }
-  }
-  .all a:hover img {
-    opacity: 0.6;
-    transition: 0.5s;
-  }
-  .logo {
-    position: fixed;
-    top: 5px;
-    left: 5px;
-  }
-  .logo img {
-    width: 95px;
-  }
-  .merumo {
-    font-family: ab-andante, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    top: 10px;
-    left: 100px;
-    position: fixed;
-  }
-  a {
-    text-decoration: none;
-  }
-  /* ここから下がハンバーガーメニューに関するCSS */
-
-  /* チェックボックスを非表示にする */
-  .drawer_hidden {
-    display: none;
-  }
-
-  /* ハンバーガーアイコンの設置スペース */
-  .drawer_open {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 68px;
-
-    right: 52.5px;
-    z-index: 100; /* 重なり順を一番上にする */
-    cursor: pointer;
-  }
-
-  /* ハンバーガーメニューのアイコン */
-
-  .drawer_open span,
-  .drawer_open span:before,
-  .drawer_open span:after {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 25px;
-
-    border-radius: 2px;
-    background: #95d4de;
-
-    transition: 0.5s;
-    position: absolute;
-  }
-  .a {
-    background-color: #f8f83b;
-    padding: 28px;
-    right: 25px;
-    position: fixed;
-    top: 40px;
-    border-radius: 50%;
-    z-index: 100;
-  }
-  /* 三本線の一番上の棒の位置調整 */
-  .drawer_open span:before {
-    bottom: 9px;
-  }
-
-  /* 三本線の一番下の棒の位置調整 */
-  .drawer_open span:after {
-    top: 9px;
-  }
-
-  /* アイコンがクリックされたら真ん中の線を透明にする */
-  #drawer_input:checked ~ .drawer_open span {
-    background: rgba(255, 255, 255, 0);
-  }
-
-  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
-  #drawer_input:checked ~ .drawer_open span::before {
-    bottom: 0;
-    transform: rotate(45deg);
-    background-color: rgb(129, 201, 243);
-  }
-
-  #drawer_input:checked ~ .drawer_open span::after {
+  100% {
+    opacity: 1; /* 透明度指定 */
     top: 0;
-    transform: rotate(-45deg);
-    background-color: rgb(129, 201, 243);
   }
+}
+.all a:hover img {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+.logo {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+}
+.logo img {
+  width: 95px;
+}
+.merumo {
+  font-family: ab-andante, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  top: 10px;
+  left: 100px;
+  position: fixed;
+}
+a {
+  text-decoration: none;
+}
+/* ここから下がハンバーガーメニューに関するCSS */
 
-  /* メニューのデザイン*/
-  .nav_content {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0%;
-    left: 100%; /* メニューを画面の外に飛ばす */
-    z-index: 50;
-    /* background: rgb(121, 122, 122); */
-    background-image: url(../image/bg_nav.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 105%;
-    transition: 0.5s;
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
 
-    padding-top: 20px;
-  }
-  .nav_content img {
-    max-width: 100%;
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50px;
 
-    position: absolute;
-    bottom: 0px;
-  }
+  right: 40px;
+  z-index: 100; /* 重なり順を一番上にする */
+  cursor: pointer;
+}
 
-  /* メニュー黒ポチを消す */
-  .nav_list {
-    list-style: none;
-    background-color: rgba(0, 0, 0, 0.4);
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 40px;
 
-    margin: 30px 16px;
-    margin-right: 30px;
-    margin-top: 5px;
-    height: 93%;
-    border: solid 2px #f8f83b;
-  }
-  .navtop {
-    margin-top: 100px;
-  }
-  .nav_item a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 35px;
-    font-family: jaf-domus, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
+  border-radius: 2px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
 
-  .current-page a {
-    color: #f8f83b;
-    text-decoration: none;
-    font-size: 35px;
-    font-family: jaf-domus, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 14px;
+}
 
-  .nav_list li {
-    margin-top: 28px;
-    margin-left: 10px;
-  }
-  .nav_list a:hover {
-    transition: 0.5s;
-    opacity: 0.5;
-    color: #1f569e;
-  }
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 14px;
+}
 
-  /* アイコンがクリックされたらメニューを表示 */
-  #drawer_input:checked ~ .nav_content {
-    left: 0; /* メニューを画面に入れる */
-  }
-  img[alt="icon_cat"] {
-    left: 15px;
-    position: fixed;
-    bottom: 52px;
-    z-index: 11;
-  }
-  /* .taitleimg {
-  margin-top: 70px;
-  text-align: right;
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+  background-color: rgb(43, 118, 161);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+  background-color: rgb(43, 118, 161);
+}
+
+/* メニューのデザイン*/
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: rgb(176, 190, 204);
+  /* background-image: url(../image/rain.jpeg); */
+  transition: 0.5s;
+
+  padding-top: 20px;
+}
+.nav_content img {
+  max-width: 100%;
+
+  position: absolute;
+  bottom: 0px;
+}
+
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;
+  margin-top: 90px;
+}
+
+.nav_item a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 30px;
+  font-family: ab-andante, sans-serif;
+}
+.current-page a {
+  color: rgb(43, 118, 161);
+  text-decoration: none;
+  font-size: 30px;
+  font-family: ab-andante, sans-serif;
+}
+
+.nav_list li {
+  margin-top: 50px;
+  margin-left: 75px;
+}
+.nav_list a:hover {
+  transition: 0.5s;
+  opacity: 0.5;
+  color: #1f569e;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  left: 0; /* メニューを画面に入れる */
+}
+
+.taitleimg {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
   position: relative;
   animation: anime2 0.8s ease;
   animation-delay: 0.5s;
   animation-fill-mode: backwards;
-} */
-
-  .taitlemessage {
-    position: relative;
-    margin-top: -75px;
-    z-index: 10;
-  }
-  .taitlemessage h1 {
-    font-size: 50px;
-    font-family: jaf-domus, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    margin-left: 32px;
-  }
-  .taitlemessage p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    margin-top: -10px;
-    text-align: center;
-  }
-  .taitlemessage strong {
-    font-size: 20px;
-    color: #08a3bc;
-  }
-  section h1 {
-    font-family: jaf-domus, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 40px;
-    margin-bottom: 0px;
-  }
-
-  .news h1::first-letter {
-    color: #08bc26;
-  }
-  .news {
-    text-align: center;
-    margin-top: 160px;
-    margin-bottom: 160px;
-    max-width: 400px;
-    text-decoration: none;
-    position: relative;
-    animation: anime2 0.8s ease;
-    animation-delay: 1s;
-    animation-fill-mode: backwards;
-  }
-
-  .border {
-    margin-top: 0px;
-    border: solid 1px #95d4de;
-  }
-  .plus {
-    position: relative;
-    left: 130px;
-    top: -65px;
-  }
-  .flex h3 {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 18px;
-    margin-top: -50px;
-  }
-  .flex p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    margin-top: -15px;
-  }
-  .newssec {
-    background-color: white;
-    font-family: sans-serif;
-
-    margin: 0 auto;
-    text-decoration: none;
-    margin-top: 16px;
-    margin-bottom: 7px;
-  }
-  .news_last {
-    margin-bottom: 32px;
-  }
-  .newssec a {
-    color: rgb(54, 54, 56);
-  }
-
-  .flex {
-    background-color: #fff;
-    border: solid 1px #95d4de;
-    box-shadow: 5px 5px 0px 0 #95d4de;
-    margin: 0 15px;
-  }
-  .flex_y {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #fff;
-    border: solid 1px #95d4de;
-    box-shadow: 5px 5px 0px 0 #95d4de;
-    padding-bottom: 50px;
-    margin: 0 15px;
-    margin-bottom: -50px;
-  }
-
-  .youtube h1::first-letter {
-    color: #bc0820;
-  }
-  .youtube {
-    text-align: center;
-    margin-bottom: 160px;
-  }
-  .fukidasi {
-    position: relative;
-    display: inline-block;
-    margin-top: 48px;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    min-width: 256px;
-    max-width: 100%;
-    color: #08a3bc;
-
-    font-size: 16px;
-    background: #fff;
-    border: solid 2px #08a3bc;
-    box-sizing: border-box;
-  }
-  .fukidasi p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-  }
-
-  .fukidasi:before {
-    content: "";
-    position: absolute;
-    bottom: -27px;
-    left: 50%;
-    margin-left: -15px;
-    border: 12px solid transparent;
-    border-top: 15px solid #fff;
-    z-index: 2;
-  }
-
-  .fukidasi:after {
-    content: "";
-    position: absolute;
-    bottom: -32px;
-    left: 50%;
-    margin-left: -17px;
-    border: 14px solid transparent;
-    border-top: 18px solid #08a3bc;
-    z-index: 1;
-  }
-
-  .fukidasi p {
-    margin: 0;
-    padding: 0;
-  }
-  .movie {
-    margin-top: 36px;
-  }
-  .movie div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .movie p {
-    margin: 0;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 50px;
-  }
-  .movie img {
-    margin-bottom: 25px;
-  }
-  .youtube img {
-    margin-top: -15px;
-  }
-  .twitter h1::first-letter {
-    color: #08a3bc;
-  }
-  .twitter {
-    text-align: center;
-    margin-bottom: 160px;
-    margin-top: 160px;
-  }
-  .twittersec {
-    margin-top: 36px;
-  }
-  .twittersec img {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-
-    margin-top: -50px;
-    margin-bottom: -20px;
-  }
-
-  img[alt="lightbluecat"] {
-    width: 181px;
-    position: relative;
-
-    bottom: -20px;
-    left: 25%;
-    z-index: 0;
-  }
-
-  footer p {
-    color: #fff;
-    margin-top: 16px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-  footer {
-    background-color: rgba(8, 163, 188, 0.75);
-    padding-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: 0px;
-    margin-right: -15px;
-    text-align: center;
-  }
-  .icon img {
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-top: 24px;
-  }
-  .icon {
-    display: inline-flex;
-    align-items: center;
-    text-align: center;
-  }
-
-  .profiletitle {
-    background-color: #95d4de;
-    width: 376px;
-    height: 491px;
-    margin-top: -38px;
-  }
-  .profilemesseage {
-    font-size: 45px;
-    font-family: jaf-domus, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    margin-left: 16px;
-    margin-top: 105px;
-  }
-  .name {
-    position: relative;
-    top: 50px;
-    left: 16px;
-  }
-  .name h2 {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    color: #f8f83b;
-  }
-  .E_name {
-    margin-top: -35px;
-    margin-left: 2px;
-    opacity: 0.9;
-    letter-spacing: 1px;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    margin-bottom: 30px;
-  }
-  .subprofile {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: #fff;
-    margin-top: -15px;
-  }
-  .tag {
-    margin-top: 126px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: #fff;
-    padding-top: 24px;
-    padding-bottom: 19px;
-    border: solid 1px;
-    padding-left: 13px;
-    width: 168px;
-  }
-
-  img[alt="prof_mv"] {
-    max-width: 260px;
-
-    position: absolute;
-    right: 0px;
-    top: 110px;
-    z-index: 0;
-  }
-
-  .plus2 {
-    position: absolute;
-    right: 24px;
-    margin-top: 40px;
-  }
-  .flex2 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-  }
-  .flex2 .item {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .flex2 .item p {
-    margin-top: 0px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-  }
-  .favorite {
-    text-align: center;
-    margin: 0 auto;
-  }
-  .favorite h3 {
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 35px;
-  }
-
-  .coffe {
-    margin-right: -15px;
-  }
-  .explanation img {
-    width: 344px;
-  }
-
-  .explanation {
-    text-align: center;
-    border: solid 3px #95d4de;
-    margin: 0 16px;
-    margin-top: 150px;
-    padding-top: 25px;
-
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-  }
-  .explanation h3 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #08a3bc;
-  }
-  .explanation p {
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 25px;
-  }
-  .line_one {
-    background-color: #95d4de;
-    width: 360px;
-    height: 3px;
-    margin: 0 auto;
-    margin-top: 160px;
-    margin-bottom: 35px;
-  }
-  .color img {
-    width: 152px;
-  }
-  .line_second {
-    background-color: #95d4de;
-    width: 360px;
-    height: 3px;
-    margin: 0 auto;
-    margin-top: 22px;
-  }
-  .color {
-    text-align: center;
-  }
-  .color h3 {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .color h3 strong {
-    color: #08a3bc;
-    font-size: 30px;
-  }
-  .color p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 16px;
-    line-height: 30px;
-  }
-  .color p strong {
-    color: #08a3bc;
-  }
-
-  .color img {
-    margin: 0 10px;
-    margin-top: 12px;
-    margin-bottom: 14px;
-  }
-  .balloon1-left {
-    position: relative;
-    display: inline-block;
-    margin: 1.5em 0 1.5em 15px;
-    padding: 20px 20px;
-    min-width: 120px;
-    max-width: 100%;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    background: #95d4de;
-    border-radius: 50px;
-    max-height: 40px;
-  }
-
-  .balloon1-left:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -30px;
-    margin-top: -15px;
-    border: 20px solid transparent;
-    border-right: 30px solid #95d4de;
-  }
-
-  .balloon1-left p {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 8px;
-  }
-
-  .balloon1-right {
-    position: relative;
-    display: inline-block;
-    margin: 1.5em 15px 1.5em 0;
-    padding: 20px 20px;
-    min-width: 120px;
-    max-width: 100%;
-    max-height: 40px;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    background: #95d4de;
-    border-radius: 50px;
-  }
-
-  .balloon1-right:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 90%;
-    margin-top: -20px;
-    border: 20px solid transparent;
-    border-left: 30px solid #95d4de;
-  }
-
-  .balloon1-right p {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    margin-top: 8px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  img[alt="slim2"] {
-    width: 120px;
-  }
-  .balloon div {
-    position: relative;
-    top: -50px;
-  }
-  .balloon {
-    margin-top: 50px;
-  }
-
-  img[alt="nekoiruka"] {
-    width: 120px;
-  }
-  .flex img[alt="lightbluecat"] {
-    margin-top: -15px;
-    margin-bottom: 25px;
-  }
-  .friend {
-    margin-bottom: 160px;
-    margin-top: 160px;
-  }
-  .friend h2 {
-    font-family: jaf-domus, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 40px;
-    margin-bottom: 0px;
-    text-align: center;
-  }
-  img[alt="p_icon"] {
-    width: 100px;
-  }
-  .work {
-    margin-top: 105px;
-    margin-bottom: -20px;
-  }
-  .work h1 {
-    font-family: jaf-domus, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 45px;
-    margin-bottom: -16px;
-
-    text-align: center;
-  }
-  .produce {
-    background-color: #95d4de;
-    margin: 0 16px;
-    padding: 30px 0;
-  }
-  .produce h3 {
-    font-family: jaf-domus, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 35px;
-    color: #f8f83b;
-    text-align: center;
-  }
-  .flex2 .produce2 {
-    margin: 0 10px;
-  }
-  .E_name2 {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    opacity: 0.9;
-    letter-spacing: 1px;
-    color: #fff;
-    font-weight: 500;
-    margin-top: -20px;
-  }
-  .produce2 p:nth-of-type(1) {
-    color: #fff;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 0;
-  }
-  .yukina_word {
-    margin-left: 15px;
-  }
-  .produce > p {
-    text-align: center;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
-  }
-  .work + img {
-    left: 50%;
-    margin-bottom: -150px;
-  }
-  img[alt="domomon"] {
-    max-width: 155px;
-    margin-left: 10px;
-    margin-right: -30px;
-    z-index: 10;
-  }
-  .work_flex {
-    display: flex;
-    justify-content: center;
-  }
-  .domomon > h2 {
-    text-align: center;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 70px;
-  }
-  .work_E_name {
-    margin-top: -25px;
-    text-align: center;
-    opacity: 0.9;
-    font-family: Arial, sans-serif;
-    letter-spacing: 1px;
-  }
-  .V_information {
-    text-align: center;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .work_fav_green > h3 {
-    text-align: center;
-
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .work_fav_green {
-    padding-top: 5px;
-    margin-top: 70px;
-    border: solid 4px #95de95;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: 20px;
-    padding-bottom: 15px;
-  }
-  .work_fav_green p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .work_item {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  .guitar {
-    margin-top: 0px;
-  }
-  .work_respons {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    margin-top: 5px;
-    margin-left: 20px;
-  }
-  .work__sns_icon {
-    margin-top: 25px;
-    margin-bottom: 75px;
-    text-align: center;
-
-    /* justify-content: center; */
-  }
-  .work__sns_icon img {
-    margin-left: 8px;
-    margin-bottom: 8px;
-  }
-  .yukina > h2 {
-    text-align: center;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 70px;
-  }
-  img[alt="yukina"] {
-    max-width: 200px;
-    margin-left: -10px;
-    margin-right: -60px;
-    z-index: 10;
-  }
-  img[alt="high"] {
-    margin-top: 5px;
-  }
-  img[alt="high"] + p {
-    margin-top: -5px;
-  }
-
-  .work_fav_blue {
-    padding-top: 5px;
-    margin-top: 100px;
-    border: solid 4px #95decd;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: 30px;
-    padding-bottom: 15px;
-  }
-  .work_fav_blue > h3 {
-    text-align: center;
-
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .work_fav_blue p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .yukina h2 {
-    margin-left: 20px;
-  }
-  .work_respons_yukina {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    margin-top: 5px;
-    margin-left: 60px;
-  }
-  .another_section img {
-    max-width: 296px;
-  }
-  .another_section {
-    text-align: center;
-    border: solid 1px rgba(52, 55, 56, 50%);
-    box-shadow: 0px 3px 0px 0 rgba(52, 55, 56, 50%);
-    background-color: #fff;
-    margin-bottom: 40px;
-    margin-left: 24px;
-    margin-right: 24px;
-    padding-top: 16px;
-    padding-bottom: 3px;
-  }
-  .another_section p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    margin-top: 0;
-  }
-  .another_section p strong {
-    font-size: 16px;
-  }
-  .another h2 {
-    font-family: jaf-domus, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 40px;
-    margin-bottom: 0px;
-    text-align: center;
-  }
-  .another {
-    margin-top: 160px;
-  }
-  .work_last img {
-    max-width: 150px;
-    position: relative;
-    top: 75px;
-  }
-  .work_last {
-    text-align: center;
-    margin-top: -25px;
-    margin-bottom: 200px;
-  }
-  .contact {
-    padding-left: 25px;
-    padding-top: 65px;
-    background-color: #95d4de;
-    padding-bottom: 58px;
-  }
-  .contact h1 {
-    font-family: jaf-domus, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 50px;
-    margin-bottom: 0px;
-    color: #fff;
-    margin-bottom: 30px;
-  }
-  .contact li {
-    color: #fff;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-top: 0;
-  }
-  .contact_form {
-    margin: 0 auto;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 95px;
-  }
-  .contact_form input {
-    width: 312px;
-    height: 28px;
-    border: solid 2px #08a3bc;
-  }
-  .contact_form p {
-    margin-bottom: 0;
-    margin-top: 30px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .contact_form textarea {
-    border: solid 2px #08a3bc;
-  }
-  .submit button {
-    color: #fff;
-    background-color: #08a3bc;
-    border: none;
-    padding: 10px 35px;
-    border-radius: 50px;
-
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-  }
-  .submit {
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 25px;
-    margin-bottom: 70px;
-  }
-  .require::after {
-    content: "*";
-    font-size: smaller;
-    color: #bc0820;
-  }
-  .pc {
-    display: none !important;
-  }
-  .sp {
-    display: block !important;
-    margin-top: 70px;
-    text-align: right;
-    position: relative;
-    right: -16px;
-    animation: anime2 0.8s ease;
-    animation-delay: 0.5s;
-    animation-fill-mode: backwards;
-    margin-bottom: 40px;
-    box-shadow: 15px 15px 0px 0 #f8f83b;
-  }
+  margin-top: -100px;
 }
-/* .balloon div {
+.taitle_font {
+  font-family: "ab-yogurt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+.btn_top {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.btn_top div {
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  margin: 0 10px;
+  background-color: white;
+  border-radius: 0.7cm;
+  box-shadow: 1px 2.5px 10px -1px rgb(205, 207, 211);
+  margin-top: 20px;
+}
+
+.taitleimg2 {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 25px;
   position: relative;
-  top: -50px;
-} */
-
-@media screen and (min-width: 768px) {
-  .pc {
-    display: block !important;
-    margin-top: 70px;
-    text-align: right;
-    margin: 0 auto;
-    position: relative;
-    right: -60px;
-    animation: anime2 0.8s ease;
-    animation-delay: 0.5s;
-    animation-fill-mode: backwards;
-    border-bottom-left-radius: 50px;
-    border-top-left-radius: 50px;
-    box-shadow: 25px 25px 0px 0 #f8f83b;
-
-    margin-bottom: -140px;
-  }
-  .sp {
-    display: none !important;
-  }
-  body {
-    background-image: url(../image/backg.jpg);
-  }
-  main {
-    margin: 0 auto;
-    margin-top: 70px;
-  }
-
-  .all a:hover img {
-    opacity: 0.6;
-    transition: 0.5s;
-  }
-  .logo {
-    position: fixed;
-    top: 5px;
-    left: 5px;
-  }
-  .logo img {
-    width: 95px;
-  }
-  .merumo {
-    font-family: ab-andante, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    top: 10px;
-    left: 100px;
-    position: fixed;
-  }
-  a {
-    text-decoration: none;
-  }
-  /* ここから下がハンバーガーメニューに関するCSS */
-
-  /* チェックボックスを非表示にする */
-  .drawer_hidden {
-    display: none;
-  }
-
-  /* ハンバーガーアイコンの設置スペース */
-  .drawer_open {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 80px;
-
-    right: 64px;
-    z-index: 100; /* 重なり順を一番上にする */
-    cursor: pointer;
-  }
-
-  /* ハンバーガーメニューのアイコン */
-
-  .drawer_open span,
-  .drawer_open span:before,
-  .drawer_open span:after {
-    content: "";
-    display: block;
-    height: 4px;
-    width: 40px;
-
-    border-radius: 2px;
-    background: #95d4de;
-
-    transition: 0.5s;
-    position: absolute;
-  }
-  .a {
-    background-color: #f8f83b;
-    padding: 40px;
-    right: 25px;
-    position: fixed;
-    top: 40px;
-    border-radius: 50%;
-    z-index: 100;
-  }
-  /* 三本線の一番上の棒の位置調整 */
-  .drawer_open span:before {
-    bottom: 12px;
-  }
-
-  /* 三本線の一番下の棒の位置調整 */
-  .drawer_open span:after {
-    top: 12px;
-  }
-
-  /* アイコンがクリックされたら真ん中の線を透明にする */
-  #drawer_input:checked ~ .drawer_open span {
-    background: rgba(255, 255, 255, 0);
-  }
-
-  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
-  #drawer_input:checked ~ .drawer_open span::before {
-    bottom: 0;
-    transform: rotate(45deg);
-    background-color: rgb(129, 201, 243);
-  }
-
-  #drawer_input:checked ~ .drawer_open span::after {
-    top: 0;
-    transform: rotate(-45deg);
-    background-color: rgb(129, 201, 243);
-  }
-
-  /* メニューのデザイン*/
-  .nav_content {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0%;
-    left: 100%; /* メニューを画面の外に飛ばす */
-    z-index: 50;
-    /* background: rgb(121, 122, 122); */
-    background-image: url(../image/bag_nav2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 105%;
-    transition: 0.5s;
-
-    padding-top: 20px;
-  }
-  .nav_content img {
-    max-width: 100%;
-
-    position: absolute;
-    bottom: 0px;
-  }
-
-  /* メニュー黒ポチを消す */
-  .nav_list {
-    list-style: none;
-    background-color: rgba(0, 0, 0, 0.4);
-
-    margin: 30px 16px;
-    margin-top: 5px;
-    height: 93%;
-    border: solid 2px #f8f83b;
-  }
-  .navtop {
-    margin-top: 100px;
-  }
-  .nav_item a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 35px;
-    font-family: jaf-domus, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-
-  .current-page a {
-    color: #f8f83b;
-    text-decoration: none;
-    font-size: 35px;
-    font-family: jaf-domus, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-
-  .nav_list li {
-    margin-top: 28px;
-    margin-left: 10px;
-  }
-  .nav_list a:hover {
-    transition: 0.5s;
-    opacity: 0.5;
-    color: #1f569e;
-  }
-
-  /* アイコンがクリックされたらメニューを表示 */
-  #drawer_input:checked ~ .nav_content {
-    left: 0; /* メニューを画面に入れる */
-  }
-  img[alt="icon_cat"] {
-    left: 15px;
-    position: fixed;
-    bottom: 52px;
-    z-index: 11;
-  }
-  .taitlemessage {
-    position: relative;
-
-    z-index: 10;
-  }
-  .taitlemessage h1 {
-    text-align: center;
-    font-size: 100px;
-    font-family: jaf-domus, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    margin-left: -1000px;
-    z-index: 500;
-  }
-  .taitlemessage p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-  }
-  .taitlemessage strong {
-    font-size: 20px;
-    color: #08a3bc;
-  }
-  section h1 {
-    font-family: jaf-domus, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 50px;
-    margin-bottom: 0px;
-  }
-
-  .news h1::first-letter {
-    color: #08bc26;
-  }
-  .news {
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 160px;
-    margin-bottom: 160px;
-    max-width: 1500px;
-    text-decoration: none;
-    position: relative;
-    animation: anime2 0.8s ease;
-    animation-delay: 1s;
-    animation-fill-mode: backwards;
-  }
-
-  .border {
-    margin-top: 0px;
-    border: solid 1px #95d4de;
-  }
-
-  .flex h3 {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 18px;
-    margin-top: 0px;
-    margin-left: -45px;
-  }
-  .flex p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    margin-top: -20px;
-    margin-left: -45px;
-  }
-
-  .newssec {
-    background-color: white;
-    font-family: sans-serif;
-
-    margin: 0 auto;
-    text-decoration: none;
-    margin-top: 16px;
-    margin-bottom: 7px;
-  }
-  .news_last {
-    margin-bottom: 32px;
-  }
-  .newssec a {
-    color: rgb(54, 54, 56);
-  }
-  .news_flex {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .flex {
-    background-color: #fff;
-    border: solid 2px #95d4de;
-    box-shadow: 8px 8px 0px 0 #95d4de;
-
-    margin: 0 auto;
-    max-width: 1500px;
-  }
-  .flex_y {
-    background-color: #fff;
-    border: solid 2px #95d4de;
-    box-shadow: 8px 8px 0px 0 #95d4de;
-
-    margin: 0 auto;
-    max-width: 1500px;
-    padding-bottom: 50px;
-
-    margin-bottom: -30px;
-  }
-  .youtube h1::first-letter {
-    color: #bc0820;
-  }
-  .youtube {
-    text-align: center;
-    margin-bottom: 160px;
-  }
-  .fukidasi {
-    position: relative;
-    display: inline-block;
-    margin-top: 48px;
-    padding-top: 10px;
-    padding-bottom: 45px;
-    min-width: 500px;
-
-    max-height: 50px;
-    color: #08a3bc;
-
-    background: #fff;
-    border: solid 2px #08a3bc;
-    box-sizing: border-box;
-  }
-  .fukidasi p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 25px;
-    font-weight: 700;
-  }
-
-  .fukidasi:before {
-    content: "";
-    position: absolute;
-    bottom: -27px;
-    left: 50%;
-    margin-left: -15px;
-    border: 12px solid transparent;
-    border-top: 15px solid #fff;
-    z-index: 2;
-  }
-
-  .fukidasi:after {
-    content: "";
-    position: absolute;
-    bottom: -32px;
-    left: 50%;
-    margin-left: -17px;
-    border: 14px solid transparent;
-    border-top: 18px solid #08a3bc;
-    z-index: 1;
-  }
-
-  .fukidasi p {
-    margin: 0;
-    padding: 0;
-  }
-  .movie {
-    margin-top: 36px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .movie div {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  .movie p {
-    margin: 0;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 50px;
-  }
-  img[alt="y_icon"] {
-    margin-top: -125px;
-  }
-  iframe {
-    width: 448px;
-    height: 252px;
-  }
-  .flex_t {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .twitter h1::first-letter {
-    color: #08a3bc;
-  }
-  .twitter {
-    text-align: center;
-    margin-bottom: 160px;
-    margin-top: 160px;
-  }
-  .twittersec {
-    margin-top: 36px;
-    display: inline-block;
-  }
-  .twittersec img {
-    /* display: flex; */
-    justify-content: center;
-    margin: 0 auto;
-
-    margin-top: 50px;
-    margin-bottom: -20px;
-  }
-  .twitter-timeline {
-    min-width: 700px;
-  }
-  img[alt="lightbluecat"] {
-    width: 400px;
-    position: relative;
-
-    bottom: -50px;
-    left: 25%;
-    z-index: 0;
-  }
-
-  footer p {
-    color: #fff;
-    margin-top: 16px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-  footer {
-    background-color: rgba(8, 163, 188, 0.75);
-    padding-bottom: 50px;
-    padding-top: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: -15px;
-    margin-right: -15px;
-    margin-bottom: -10px;
-    text-align: center;
-  }
-  .icon img {
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-top: 24px;
-  }
-  .icon {
-    display: inline-flex;
-    align-items: center;
-    text-align: center;
-  }
-
-  .profiletitle {
-    background-color: #95d4de;
-    width: 376px;
-    height: 491px;
-    margin-top: -38px;
-  }
-  .profilemesseage {
-    font-size: 55px;
-    font-family: jaf-domus, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    margin-left: 16px;
-    margin-top: 105px;
-  }
-  .name {
-    position: relative;
-    top: 50px;
-    left: 16px;
-  }
-  .name h2 {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    color: #f8f83b;
-  }
-  .E_name {
-    margin-top: -35px;
-    margin-left: 2px;
-    opacity: 0.9;
-    letter-spacing: 1px;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    margin-bottom: 30px;
-  }
-  .subprofile {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: #fff;
-    margin-top: -15px;
-  }
-  .tag {
-    margin-top: 126px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: #fff;
-    padding-top: 24px;
-    padding-bottom: 19px;
-    border: solid 1px;
-    padding-left: 13px;
-    width: 168px;
-  }
-
-  img[alt="prof_mv"] {
-    max-width: 300px;
-
-    position: absolute;
-    right: 500px;
-    top: 50px;
-    z-index: 0;
-  }
-
-  .plus2 {
-    position: absolute;
-    right: 24px;
-    margin-top: 40px;
-  }
-  .flex2 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-  }
-  .flex2 .item {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .flex2 .item p {
-    margin-top: 0px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-  }
-  .favorite {
-    text-align: center;
-    margin: 0 auto;
-  }
-  .favorite h3 {
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 35px;
-  }
-
-  .coffe {
-    margin-right: -15px;
-  }
-  .explanation img {
-    width: 344px;
-  }
-
-  .explanation {
-    text-align: center;
-    border: solid 3px #95d4de;
-    margin: 0 16px;
-    margin-top: 150px;
-    padding-top: 25px;
-
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-  }
-  .explanation h3 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #08a3bc;
-  }
-  .explanation p {
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 25px;
-  }
-  .line_one {
-    background-color: #95d4de;
-    width: 360px;
-    height: 3px;
-    margin: 0 auto;
-    margin-top: 160px;
-    margin-bottom: 35px;
-  }
-  .color img {
-    width: 152px;
-  }
-  .line_second {
-    background-color: #95d4de;
-    width: 360px;
-    height: 3px;
-    margin: 0 auto;
-    margin-top: 22px;
-  }
-  .color {
-    text-align: center;
-  }
-  .color h3 {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .color h3 strong {
-    color: #08a3bc;
-    font-size: 30px;
-  }
-  .color p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 16px;
-    line-height: 30px;
-  }
-  .color p strong {
-    color: #08a3bc;
-  }
-
-  .color img {
-    margin: 0 10px;
-    margin-top: 12px;
-    margin-bottom: 14px;
-  }
-  .balloon1-left {
-    position: relative;
-    display: inline-block;
-    margin: 1.5em 0 1.5em 15px;
-    padding: 20px 20px;
-    min-width: 120px;
-    max-width: 100%;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    background: #95d4de;
-    border-radius: 50px;
-    max-height: 40px;
-  }
-
-  .balloon1-left:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -30px;
-    margin-top: -15px;
-    border: 20px solid transparent;
-    border-right: 30px solid #95d4de;
-  }
-
-  .balloon1-left p {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 8px;
-  }
-
-  .balloon1-right {
-    position: relative;
-    display: inline-block;
-    margin: 1.5em 15px 1.5em 0;
-    padding: 20px 20px;
-    min-width: 120px;
-    max-width: 100%;
-    max-height: 40px;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    background: #95d4de;
-    border-radius: 50px;
-  }
-
-  .balloon1-right:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 90%;
-    margin-top: -20px;
-    border: 20px solid transparent;
-    border-left: 30px solid #95d4de;
-  }
-
-  .balloon1-right p {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    margin-top: 8px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  .friendM {
-    margin-left: 75px;
-  }
-  img[alt="slim2"] {
-    width: 120px;
-  }
-  .balloon div {
-    position: relative;
-    top: -50px;
-  }
-  .balloon {
-    margin-top: 50px;
-  }
-
-  img[alt="nekoiruka"] {
-    width: 120px;
-  }
-  .flex img[alt="lightbluecat"] {
-    margin-top: -15px;
-    margin-bottom: 50px;
-    margin-left: -100px;
-  }
-  .friend {
-    margin-bottom: 160px;
-    margin-top: 160px;
-  }
-  .friend h2 {
-    font-family: jaf-domus, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 50px;
-    margin-bottom: 0px;
-    text-align: center;
-  }
-  .width2 {
-    max-width: 500px;
-  }
-
-  img[alt="p_icon"] {
-    width: 200px;
-  }
-  .work {
-    margin-top: 105px;
-    margin-bottom: -20px;
-  }
-  .work h1 {
-    font-family: jaf-domus, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 45px;
-    margin-bottom: -16px;
-
-    text-align: center;
-  }
-  .produce {
-    background-color: #95d4de;
-    margin: 0 16px;
-    padding: 30px 0;
-  }
-  .produce h3 {
-    font-family: jaf-domus, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 35px;
-    color: #f8f83b;
-    text-align: center;
-  }
-  .flex2 .produce2 {
-    margin: 0 10px;
-  }
-  .E_name2 {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    opacity: 0.9;
-    letter-spacing: 1px;
-    color: #fff;
-    font-weight: 500;
-    margin-top: -20px;
-  }
-  .produce2 p:nth-of-type(1) {
-    color: #fff;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 0;
-  }
-  .yukina_word {
-    margin-left: 15px;
-  }
-  .produce > p {
-    text-align: center;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
-  }
-  .work + img {
-    left: 50%;
-    margin-bottom: -150px;
-  }
-  img[alt="domomon"] {
-    max-width: 155px;
-    margin-left: 10px;
-    margin-right: -30px;
-    z-index: 10;
-  }
-  .work_flex {
-    display: flex;
-    justify-content: center;
-  }
-  .domomon > h2 {
-    text-align: center;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 70px;
-  }
-  .work_E_name {
-    margin-top: -25px;
-    text-align: center;
-    opacity: 0.9;
-    font-family: Arial, sans-serif;
-    letter-spacing: 1px;
-  }
-  .V_information {
-    text-align: center;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .work_fav_green > h3 {
-    text-align: center;
-
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .work_fav_green {
-    padding-top: 5px;
-    margin-top: 70px;
-    border: solid 4px #95de95;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: 20px;
-    padding-bottom: 15px;
-  }
-  .work_fav_green p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .work_item {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  .guitar {
-    margin-top: 0px;
-  }
-  .work_respons {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    margin-top: 5px;
-    margin-left: 20px;
-  }
-  .work__sns_icon {
-    margin-top: 25px;
-    margin-bottom: 75px;
-    text-align: center;
-
-    /* justify-content: center; */
-  }
-  .work__sns_icon img {
-    margin-left: 8px;
-    margin-bottom: 8px;
-  }
-  .yukina > h2 {
-    text-align: center;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 70px;
-  }
-  img[alt="yukina"] {
-    max-width: 200px;
-    margin-left: -10px;
-    margin-right: -60px;
-    z-index: 10;
-  }
-  img[alt="high"] {
-    margin-top: 5px;
-  }
-  img[alt="high"] + p {
-    margin-top: -5px;
-  }
-  .work_fav_blue {
-    padding-top: 5px;
-    margin-top: 100px;
-    border: solid 4px #95decd;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: 30px;
-    padding-bottom: 15px;
-  }
-  .work_fav_blue > h3 {
-    text-align: center;
-
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .work_fav_blue p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .yukina h2 {
-    margin-left: 20px;
-  }
-  .work_respons_yukina {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    margin-top: 5px;
-    margin-left: 60px;
-  }
-  .another_section img {
-    max-width: 296px;
-  }
-  .another_section {
-    text-align: center;
-    border: solid 1px rgba(52, 55, 56, 50%);
-    box-shadow: 0px 3px 0px 0 rgba(52, 55, 56, 50%);
-    background-color: #fff;
-    margin-bottom: 40px;
-    margin-left: 24px;
-    margin-right: 24px;
-    padding-top: 16px;
-    padding-bottom: 3px;
-  }
-  .another_section p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-size: 14px;
-    margin-top: 0;
-  }
-  .another_section p strong {
-    font-size: 16px;
-  }
-  .another h2 {
-    font-family: jaf-domus, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 40px;
-    margin-bottom: 0px;
-    text-align: center;
-  }
-  .another {
-    margin-top: 160px;
-  }
-  .work_last img {
-    max-width: 150px;
-    position: relative;
-    top: 75px;
-  }
-  .work_last {
-    text-align: center;
-    margin-top: -25px;
-    margin-bottom: 200px;
-  }
-  .workW {
-    width: 750px;
-  }
+  animation: anime2 0.8s ease;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
 }
-/* .nav_list {
+.taitleimg2 img {
+  z-index: -50;
+}
+
+.taitleimg2 h1 {
+  font-family: ab-andante, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+}
+.work h1 {
+  font-family: ab-andante, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+}
+.work {
+  text-align: center;
+  margin-top: 350px;
+  margin-bottom: -150px;
+  max-width: 400px;
+  text-decoration: none;
+  position: relative;
+  animation: anime2 0.8s ease;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+.work a:hover {
+  transition: 0.5s;
+  opacity: 0.6;
+}
+.icon a:hover {
+  transition: 0.5s;
+  opacity: 0.6;
+}
+.white img,
+.black img {
+  max-width: 225px;
+  border-radius: 0.2cm;
+  margin-top: 25px;
+  max-height: 150px;
+}
+.white {
+  background-color: white;
+  font-family: sans-serif;
+  width: 300px;
+  margin: 0 auto;
+  text-decoration: none;
+  /* padding-top: 25px;
+  padding-bottom: 75px; */
+
+  height: 290px;
+  border-radius: 0.3cm;
+  box-shadow: 1px 2.5px 10px -1px rgb(205, 207, 211);
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.black {
+  background-color: #3e4b5a;
+  font-family: sans-serif;
+  color: #fff;
+  width: 300px;
+  margin: 0 auto;
+  height: 290px;
+  text-decoration: none;
+
+  /* padding-top: 25px;
+  padding-bottom: 75px; */
+  border-radius: 0.3cm;
+  box-shadow: 1px 2.5px 10px -1px rgb(82, 83, 85);
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.black a {
+  color: #fff;
+}
+.white a {
+  color: rgb(54, 54, 56);
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.another img {
+  width: 300px;
+  border-radius: 0.3cm;
+  box-shadow: 1px 2.5px 5px -1px rgb(148, 150, 153);
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 25px;
+  position: relative;
+  animation: anime2 0.8s ease;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}
+.another {
+  background-color: white;
+  width: 350px;
+  /* height: 00px; */
+  margin: 0 auto;
+  margin-top: -25px;
+  border-radius: 0.7cm;
+  margin-bottom: 150px;
+  padding-bottom: 15px;
+}
+.icon img {
+  width: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.icon {
+  margin-top: 300px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.profile img {
+  max-width: 200px;
+  border-radius: 50%;
+  margin-top: 25px;
+}
+.profile {
+  text-align: center;
+  position: relative;
+  animation: anime2 0.8s ease;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+.profile h1 {
+  font-family: ab-yogurt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 45px;
+  margin-top: 10px;
+}
+.profile p {
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 12px;
+}
+.skill {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  animation: anime2 0.8s ease;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}
+.skill h1 {
+  margin-top: 50px;
+  font-family: ab-andante, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+}
+.skillflex {
+  font-family: sans-serif;
+}
+img[alt="webimg"] {
+  width: 100px;
+}
+.skillflex2 img {
+  width: 50px;
+}
+.skillflex2 figcaption {
+  font-family: sans-serif;
+  font-size: 12px;
+}
+.skillflex2 {
+  display: flex;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+.skillflex2 figure {
+  margin: 0 auto;
+}
+.photoimg img {
+  max-width: 150px;
+  border-radius: 1.5cm;
+  margin-top: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.photo {
+  margin-top: 150px;
+  text-align: center;
+  position: relative;
+  animation: anime2 0.8s ease;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+img[alt="mizuneko"] {
+  width: 250px;
+  position: absolute;
+  margin-top: -100px;
+  z-index: -50;
+}
+img[alt="mizuneko2"] {
+  width: 250px;
+  position: absolute;
+  margin-top: -100px;
+  right: 0;
+  z-index: -50;
+}
+
+footer p {
+  color: #8687c5;
+}
+footer {
+  background-color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.w_merumoTop {
+  background-color: white;
+  width: 350px;
+  /* height: 00px; */
+  margin: 0 auto;
+  margin-top: -25px;
+  border-radius: 0.7cm;
+  margin-bottom: 150px;
+  padding-bottom: 15px;
+}
+.w_taitle {
+  font-family: "felt-tip-woman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 100px;
+}
+.b_taitle {
+  color: white;
+  font-family: "felt-tip-woman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.w_merumoTop img {
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 25px;
+  max-width: 300px;
+}
+img[alt="b"] {
+  margin-top: 25px;
+}
+.twitter {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 160px;
+  margin-top: 160px;
+  background-color: white;
+  border-radius: 0.7cm;
+  width: 350px;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+.twittersec {
+  display: inline-block;
+}
+.twittersec img {
+  /* display: flex; */
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: -15px;
+}
+/* .twitch iframe {
+} */
+.twitch {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 150px;
+  background-color: white;
+  border-radius: 0.7cm;
+  width: 350px;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+.twicth_logo {
+  margin-top: 25px;
+  margin-bottom: -15px;
+}
+.newssec img {
+  max-width: 300px;
+  margin-top: 20px;
+  border: #bbb3e2 solid 2px;
+}
+.newssec p {
+  margin-top: 0px;
+}
+.news {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 150px;
+  background-color: white;
+  border-radius: 0.7cm;
+  width: 350px;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+.borderLine {
+  max-width: 300px;
+  border: dashed 1px #8e7edf;
+  margin-top: 25px;
+}
+.top_taitle {
+  font-family: "felt-tip-woman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+}
+img[alt="newsIcon"] {
+  max-width: 50px;
+  margin-top: 15px;
+}
+img[alt="twitchIcon"] {
+  max-width: 45px;
+  margin-top: 15px;
+}
+
+img[alt="twitterIcon"] {
+  max-width: 50px;
+  margin-top: 20px;
+}
+img[alt="white_merumo"] {
+  max-width: 70px;
+  margin-top: 5px;
+}
+img[alt="black_merumo"] {
+  max-width: 70px;
+  margin-top: 5px;
+}
+img[alt="work_icon"] {
+  max-width: 55px;
+  margin-top: 13px;
+}
+.w_merumoTop h1 {
+  font-family: ab-yogurt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  margin-top: 10px;
+  text-align: center;
+}
+.w_merumoTop p {
+  font-family: ab-yogurt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+img[alt="p_icon"] {
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 1px 2.5px 5px -1px rgb(205, 207, 211);
+}
+.flex2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.flex2 .produce2 {
+  margin: 0 7px;
+}
+.produce {
+  text-align: center;
+  background-color: white;
+  width: 350px;
+  /* height: 00px; */
+  margin: 0 auto;
+  margin-bottom: 100px;
+  border-radius: 0.7cm;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+.yukina_word {
+  margin-right: -15px;
+}
+.another h2 {
+  font-family: "felt-tip-woman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 50px;
+  margin-top: 100px;
+}
+.another {
+  text-align: center;
+}
+.smallText {
+  font-size: 12px;
+}
+.twitterLogo img {
+  width: 40px;
+}
+.twitterLogo {
+  text-align: center;
+  margin-top: 25px;
+  margin-left: -20px;
+}
+.b_merumo_white {
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .nav_list {
     display: flex;
 
     height: 75px;
@@ -1998,7 +655,7 @@
     top: 5px;
     margin-left: 500px;
     width: 100%;
-   
+    /* margin-left: 400px; */
   }
   ul {
     position: fixed;
@@ -2014,6 +671,10 @@
   .nav_item a {
     justify-content: right;
     color: #333;
+  }
+  .body2 .nav_item a {
+    justify-content: right;
+    color: #fff;
   }
   .drawer_open {
     display: none;
@@ -2062,7 +723,8 @@
     background-color: white;
     width: 350px;
     margin: 0 auto;
-
+    /* padding-top: 25px;
+    padding-bottom: 75px; */
 
     height: 340px;
     border-radius: 0.3cm;
@@ -2079,7 +741,8 @@
     margin: 0 auto;
     height: 340px;
 
-
+    /* padding-top: 25px;
+    padding-bottom: 75px; */
     border-radius: 0.3cm;
     box-shadow: 1px 2.5px 10px -1px rgb(82, 83, 85);
     margin-top: 25px;
@@ -2095,12 +758,16 @@
   }
 
   .another img {
-    border-radius: 50%;
+    width: 300px;
+    border-radius: 0.3cm;
     box-shadow: 1px 2.5px 5px -1px rgb(148, 150, 153);
-    margin-left: 28px;
-    margin-right: 28px;
-    margin-top: 50px;
-    width: 175px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 25px;
+    position: relative;
+    animation: anime2 0.8s ease;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
   }
 
   .another {
@@ -2237,4 +904,4 @@
     margin-bottom: 400px;
     font-size: 30px;
   }
-}  ; */
+}
